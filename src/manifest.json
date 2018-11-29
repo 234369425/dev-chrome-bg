@@ -1,0 +1,43 @@
+{
+  "manifest_version": 2,
+  "name": "dev-chrome-bg",
+  "version": "1.0.0",
+  "description": "程序猿专用chrome插件",
+  "icons": {
+    "16": "img/bug32.png",
+    "48": "img/bug32.png",
+    "128": "img/bug32.png"
+  },
+  "background": {
+    "page": "index.html"
+    //"scripts": ["js/background.js"]
+  },
+  "browser_action": {
+    "default_icon": "img/bug32.png",
+    "default_title": "程序猿专用chrome插件",
+    "default_popup": "popup.html"
+  },
+  "web_accessible_resources": [
+    "js/shortcuts.js"
+  ],
+  "homepage_url": "http://www.beheresoft.com",
+  "chrome_url_overrides": {
+    "newtab": "index.html"
+  },
+  "options_page": "index.html",
+  "options_ui": {
+    "page": "index.html",
+    "chrome_style": true
+  },
+  "permissions": [
+    "contextMenus",
+    "tabs",
+    "notifications",
+    "webRequest",
+    "webRequestBlocking",
+    "storage",
+    "http://*/*",
+    "https://*/*"
+  ],
+  "devtools_page": "./tools.html"
+}
